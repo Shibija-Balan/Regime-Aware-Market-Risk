@@ -9,6 +9,7 @@ on:
       - "src/**"
       - "requirements.txt"
       - "pyproject.toml"
+      - ".github/workflows/run_empirical_analysis.yml"
 
 permissions:
   contents: write
@@ -37,12 +38,12 @@ jobs:
 
       - name: Commit analysis outputs
         run: |
-          if git diff --quiet -- outputs; then
+          git add outputs
+          if git diff --cached --quiet; then
             echo "No output changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add outputs
           git commit -m "Update empirical analysis outputs"
           git push
