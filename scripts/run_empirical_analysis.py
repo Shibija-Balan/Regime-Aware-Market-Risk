@@ -1,3 +1,5 @@
+"""Run the reproducible empirical analysis and write report outputs."""
+
 from __future__ import annotations
 
 from pathlib import Path
