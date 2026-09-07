@@ -1,0 +1,82 @@
+{
+  "sample_start": "2015-01-05",
+  "sample_end": "2026-09-04",
+  "observations": 2935,
+  "weights": {
+    "SPY": 0.2,
+    "TLT": 0.2,
+    "LQD": 0.2,
+    "GLD": 0.2,
+    "FXB": 0.2
+  },
+  "portfolio": {
+    "annualised_return": 0.05786164363502122,
+    "annualised_volatility": 0.07933260842807632,
+    "sharpe_zero_rf": 0.7293551136350083,
+    "max_drawdown": -0.21869916999077044
+  },
+  "risk_metrics": {
+    "historical_var_95": 0.007794193189142143,
+    "historical_var_99": 0.012792401981782046,
+    "historical_es_95": 0.011319445166561116,
+    "historical_es_99": 0.017936699154955653,
+    "parametric_var_95": 0.007984401955733326,
+    "parametric_var_99": 0.011390158953391403
+  },
+  "backtests": {
+    "historical_99": {
+      "observations": 2685.0,
+      "exceptions": 39.0,
+      "expected_exception_rate": 0.010000000000000009,
+      "observed_exception_rate": 0.01452513966480447,
+      "lr_stat": 4.872694977766685,
+      "p_value": 0.027284858106362345
+    },
+    "ewma_99": {
+      "observations": 2875.0,
+      "exceptions": 52.0,
+      "expected_exception_rate": 0.010000000000000009,
+      "observed_exception_rate": 0.01808695652173913,
+      "lr_stat": 15.321459142457911,
+      "p_value": 9.068054842030172e-05
+    }
+  },
+  "regime": {
+    "stress_score_mean": 0.5947241114868337,
+    "stress_score_95pct": 0.9263861861804649,
+    "breaches_in_stressed_regime": 16,
+    "total_historical_var_breaches": 39
+  },
+  "historical_worst_windows": {
+    "1_day": {
+      "start_date": "2020-03-18 00:00:00",
+      "end_date": "2020-03-18 00:00:00",
+      "horizon_days": 1,
+      "compounded_return": -0.043732163080565156
+    },
+    "5_day": {
+      "start_date": "2020-03-12 00:00:00",
+      "end_date": "2020-03-18 00:00:00",
+      "horizon_days": 5,
+      "compounded_return": -0.09485603580465873
+    },
+    "20_day": {
+      "start_date": "2020-02-21 00:00:00",
+      "end_date": "2020-03-19 00:00:00",
+      "horizon_days": 20,
+      "compounded_return": -0.13368000430845828
+    }
+  },
+  "scenarios": {
+    "risk_off": -0.03,
+    "inflation_rates_shock": -0.04800000000000001,
+    "sterling_shock": -0.022000000000000006
+  },
+  "reverse_stress_5pct": {
+    "SPY": -0.05844100629805517,
+    "TLT": -0.052562486975922994,
+    "LQD": -0.04004864343788904,
+    "GLD": -0.06785779394743895,
+    "FXB": -0.031090069340693836
+  }
+}
